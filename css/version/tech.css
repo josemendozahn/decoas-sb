@@ -30,6 +30,7 @@ h2,
 h3,
 h4,
 h5 {
+    font-family: 'Lucida Calligraphy', 'Poppins', serif !important;
     font-weight: 600;
 }
 
@@ -104,14 +105,89 @@ h5 {
 }
 
 .first-slot {
-    float: left;
-    width: 50%;
+    float: none;
+    width: 100%;
+}
+
+.first-slot .masonry-box {
+    max-width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.first-slot .masonry-box img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Bootstrap carousel en el hero */
+#heroCarousel {
+    width: 100%;
+}
+
+#heroCarousel .carousel-inner {
+    max-height: 600px;
+}
+
+#heroCarousel .carousel-item {
+    max-height: 600px;
+}
+
+/* Indicadores del carrusel */
+#heroCarousel .carousel-indicators {
+    bottom: 20px;
+}
+
+#heroCarousel .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid rgba(255,255,255,0.8);
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+#heroCarousel .carousel-indicators .active {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+/* Controles del carrusel */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    width: 5%;
+    opacity: 0.7;
+}
+
+#heroCarousel .carousel-control-prev:hover,
+#heroCarousel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+#heroCarousel .carousel-control-prev-icon,
+#heroCarousel .carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 50%;
 }
 
 .last-slot,
 .second-slot {
     float: left;
     width: 25%;
+}
+
+/* Shadow effect dentro del carrusel */
+#heroCarousel .shadoweffect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .first-slot .blog-meta h4 {
@@ -373,11 +449,24 @@ a:focus {
     .shadow-desc {
         padding: 1rem 0.5rem;
     }
-    .last-slot,
-    .second-slot,
     .first-slot {
         float: none;
         width: 100%;
         display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .first-slot .masonry-box {
+        max-height: 300px;
+    }
+    .first-slot .masonry-box img {
+        height: 300px;
+    }
+    #heroCarousel .carousel-inner {
+        max-height: 300px;
+    }
+    #heroCarousel .carousel-item {
+        max-height: 300px;
     }
 }

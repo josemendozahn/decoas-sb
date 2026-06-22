@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Site Metas -->
+    <title>Calendario 2026 - DECOAS Santa Bárbara</title>
+    <meta name="keywords" content="DECOAS, Santa Bárbara, calendario, eventos, actividades ambientales, 2026, Honduras">
+    <meta name="description" content="Calendario Anual de Actividades DECOAS 2026 - Eventos y actividades de educación ambiental">
+    <meta name="author" content="Unidad de Tecnología Informática - DDE Santa Bárbara">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/logo_decoas_256.jpeg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="images/logo_decoas_256.jpeg">
+    
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="css/colors.css" rel="stylesheet">
+
+    <!-- Version Tech CSS for this template -->
+    <link href="css/version/tech.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* ===== ESTILOS DEL CALENDARIO DECOAS 2026 ===== */
+        .cal-hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid #2e7d32;
+            margin-bottom: 2.5rem;
+        }
+        .cal-hero h2 {
+            font-family: 'Lucida Calligraphy', 'Poppins', serif !important;
+            color: #2e7d32 !important;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem;
+            line-height: 1.3;
+        }
+        .cal-hero .lema {
+            font-size: 1.3rem;
+            color: #388e3c;
+            font-style: italic;
+            margin: 0.5rem 0 0;
+            font-weight: 500;
+        }
+        .cal-hero .sub-lema {
+            font-size: 0.95rem;
+            color: #558b2f;
+            margin-top: 0.8rem;
+            display: block;
+            font-style: italic;
+        }
+
+        /* Actividades Permanentes */
+        .permanentes-box {
+            background: #f1f8e9;
+            border: 2px dashed #81c784;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .permanentes-box h4 {
+            font-family: 'Lucida Calligraphy', 'Poppins', serif !important;
+            color: #2e7d32 !important;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0 0 1rem;
+            padding: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .permanentes-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .permanentes-box ul li {
+            padding: 0.4rem 0;
+            font-size: 15px;
+            color: #2e3b2e;
+            line-height: 1.5;
+        }
+        .permanentes-box ul li:before {
+            content: "🔄 ";
+        }
+
+        /* Mes del calendario */
+        .mes-card {
+            background: #fff;
+            border: 1px solid #e2e2e2;
+            margin-bottom: 2rem;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            overflow: hidden;
+        }
+        .mes-card:hover {
+            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.12);
+            border-color: #a5d6a7;
+        }
+        .mes-header {
+            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            padding: 1.2rem 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .mes-header .mes-nombre {
+            font-family: 'Goudy Stout', 'Impact', 'Arial Black', sans-serif !important;
+            color: #ffffff !important;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .mes-header .mes-tema {
+            color: #e8f5e9;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(255,255,255,0.15);
+            padding: 0.3rem 1rem;
+            border-radius: 3px;
+        }
+        .mes-body {
+            padding: 1.5rem 1.8rem;
+        }
+        .mes-body .mes-subtitulo {
+            font-family: 'Lucida Calligraphy', 'Poppins', serif !important;
+            color: #2e7d32 !important;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 1rem;
+        }
+        .mes-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .mes-body ul li {
+            padding: 0.5rem 0;
+            font-size: 15px;
+            color: #3e4a3e;
+            line-height: 1.5;
+            border-bottom: 1px dashed #e8f5e9;
+        }
+        .mes-body ul li:last-child {
+            border-bottom: 0;
+        }
+
+        /* Cierre del calendario */
+        .cal-footer-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 4px solid #2e7d32;
+            padding: 1.5rem 2rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .cal-footer-box h4 {
+            font-family: 'Lucida Calligraphy', 'Poppins', serif !important;
+            color: #1b5e20 !important;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem;
+        }
+        .cal-footer-box p {
+            margin: 0;
+            color: #2e7d32;
+            font-size: 1rem;
+        }
+        .cal-footer-box .tags {
+            margin-top: 0.8rem;
+        }
+        .cal-footer-box .tags span {
+            display: inline-block;
+            background: #2e7d32;
+            color: #fff;
+            font-size: 12px;
+            padding: 0.2rem 1rem;
+            border-radius: 3px;
+            margin: 0.2rem 0.3rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 767px) {
+            .cal-hero h2 { font-size: 1.5rem; }
+            .cal-hero .lema { font-size: 1rem; }
+            .mes-header { flex-direction: column; text-align: center; }
+            .mes-header .mes-nombre { font-size: 1.4rem; margin-bottom: 0.5rem; }
+            .mes-body { padding: 1rem; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <header class="tech-header header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo_decoas.jpeg" alt="DECOAS" style="max-height: 45px; border-radius: 6px;"><span class="navbar-title">DECOAS <small>Santa Bárbara</small></span></a>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="recursos.html">Recursos</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="calendario.html">Calendario</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aprende.html">Aprende</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                    </div>
+                </nav>
+            </div><!-- end container-fluid -->
+        </header><!-- end market-header -->
+
+        <div class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2><i class="fa fa-calendar"></i> Calendario de Eventos</h2>
+                        <small>Actividades DECOAS 2026</small>
+                    </div><!-- end col -->
+                    <div class="col-md-2">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                            <li class="breadcrumb-item active">Calendario</li>
+                        </ol>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end page-title -->
+
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-top clearfix">
+                                <h4 class="pull-left">Calendario Anual DECOAS 2026 <a href="#"><i class="fa fa-calendar-check-o"></i></a></h4>
+                            </div><!-- end blog-top -->
+
+                            <div class="blog-list clearfix">
+
+                                <!-- Hero -->
+                                <div class="cal-hero">
+                                    <h2>Calendario Anual de Actividades DECOAS 2026</h2>
+                                    <p class="lema">"Pequeñas acciones, grandes cambios para nuestro planeta."</p>
+                                    <span class="sub-lema">Educando para la sostenibilidad, la prevención y el cuidado de la vida</span>
+                                </div>
+
+                                <!-- Actividades Permanentes -->
+                                <div class="permanentes-box">
+                                    <h4>🌍 Actividades Permanentes (Todo el Año)</h4>
+                                    <ul>
+                                        <li>Jornadas de limpieza institucional y comunitaria.</li>
+                                        <li>Promoción de valores ambientales, solidaridad, responsabilidad y trabajo en equipo.</li>
+                                        <li>Acciones de protección y conservación del medio ambiente.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- FEBRERO -->
+                                <div class="mes-card" id="febrero">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">FEBRERO</span>
+                                        <span class="mes-tema">Respira Limpio</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <p class="mes-subtitulo">Jornada Ecológica Institucional</p>
+                                        <ul>
+                                            <li>🌿 Limpieza de áreas verdes.</li>
+                                            <li>♻️ Recolección y clasificación de residuos.</li>
+                                            <li>🌱 Siembra de plantas ornamentales.</li>
+                                            <li>📢 Campaña de sensibilización ambiental.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- MARZO -->
+                                <div class="mes-card" id="marzo">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">MARZO</span>
+                                        <span class="mes-tema">Celebración Educativa del Día del Agua</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <p class="mes-subtitulo">Conciencia y Acción</p>
+                                        <ul>
+                                            <li>🚰 Charlas sobre el uso responsable del agua.</li>
+                                            <li>🎨 Elaboración de murales educativos.</li>
+                                            <li>📝 Concursos de mensajes ambientales.</li>
+                                            <li>💦 Actividades de concienciación estudiantil.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- ABRIL -->
+                                <div class="mes-card" id="abril">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">ABRIL</span>
+                                        <span class="mes-tema">Ecoacción Departamental</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <p class="mes-subtitulo">Movilización Educativa por el Cuidado del Planeta</p>
+                                        <ul>
+                                            <li>🌍 Celebración del Día de la Tierra.</li>
+                                            <li>🚶 Caminata ecológica.</li>
+                                            <li>🎭 Presentaciones artísticas ambientales.</li>
+                                            <li>🌱 Promoción de acciones sostenibles.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- MAYO -->
+                                <div class="mes-card" id="mayo">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">MAYO</span>
+                                        <span class="mes-tema">Preparados para Actuar</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <ul>
+                                            <li>🚑 Capacitación en Primeros Auxilios.</li>
+                                            <li>⚠️ Gestión Integral de Riesgos.</li>
+                                            <li>🌿 Sostenibilidad Ambiental.</li>
+                                            <li>🌲 Celebración del Día del Árbol.</li>
+                                            <li>🌱 Jornada de reforestación.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- JUNIO -->
+                                <div class="mes-card" id="junio">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">JUNIO</span>
+                                        <span class="mes-tema">Ecoacción Digital</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <ul>
+                                            <li>📖 Publicación de la Revista Digital DECOAS.</li>
+                                            <li>📸 Difusión de experiencias exitosas.</li>
+                                            <li>🌿 Compartir proyectos ambientales destacados.</li>
+                                            <li>📰 Promoción de buenas prácticas ecológicas.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- JULIO -->
+                                <div class="mes-card" id="julio">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">JULIO</span>
+                                        <span class="mes-tema">Feria Creativa de Reciclaje</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <p class="mes-subtitulo">Conciencia Ambiental</p>
+                                        <ul>
+                                            <li>🎨 Exposición de materiales reutilizados.</li>
+                                            <li>🏆 Concurso de creatividad ecológica.</li>
+                                            <li>♻️ Talleres de reciclaje.</li>
+                                            <li>🌍 Campaña de reducción de residuos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- AGOSTO -->
+                                <div class="mes-card" id="agosto">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">AGOSTO</span>
+                                        <span class="mes-tema">Cuidándome Mejor</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <ul>
+                                            <li>🪥 Taller de higiene personal.</li>
+                                            <li>👐 Lavado correcto de manos.</li>
+                                            <li>❤️ Promoción de hábitos saludables.</li>
+                                            <li>🌟 Cuidado integral de la salud.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- SEPTIEMBRE -->
+                                <div class="mes-card" id="septiembre">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">SEPTIEMBRE</span>
+                                        <span class="mes-tema">Galería Digital "Verde Patepluma"</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <ul>
+                                            <li>📸 Exposición fotográfica ambiental.</li>
+                                            <li>🎨 Muestras de arte estudiantil.</li>
+                                            <li>🌱 Historias de impacto ecológico.</li>
+                                            <li>🦜 Celebración del compromiso ambiental.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- OCTUBRE -->
+                                <div class="mes-card" id="octubre">
+                                    <div class="mes-header">
+                                        <span class="mes-nombre">OCTUBRE</span>
+                                        <span class="mes-tema">Raíces Verdes</span>
+                                    </div>
+                                    <div class="mes-body">
+                                        <p class="mes-subtitulo">Feria de Conciencia Ambiental</p>
+                                        <ul>
+                                            <li>🌿 Presentación de proyectos ecológicos.</li>
+                                            <li>♻️ Exhibición de iniciativas sostenibles.</li>
+                                            <li>🤝 Participación comunitaria.</li>
+                                            <li>🏅 Reconocimiento a estudiantes destacados.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Cierre -->
+                                <div class="cal-footer-box">
+                                    <h4>DECOAS — Educación Ambiental • Gestión de Riesgos • Participación Estudiantil • Desarrollo Sostenible</h4>
+                                    <p>"Juntos construimos comunidades más verdes, seguras y resilientes."</p>
+                                    <div class="tags">
+                                        <span>🌱 Educación Ambiental</span>
+                                        <span>⚠️ Gestión de Riesgos</span>
+                                        <span>🎓 Participación Estudiantil</span>
+                                        <span>🌍 Desarrollo Sostenible</span>
+                                    </div>
+                                </div>
+
+                                <hr class="invis">
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p style="color: #2e7d32; font-weight: 500; font-size: 1.1rem;"><i class="fa fa-leaf"></i> "DECOAS: Formando ciudadanos comprometidos con el ambiente, la escuela y la comunidad." 🌎💚</p>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end blog-list -->
+                        </div><!-- end page-wrapper -->
+
+                        <hr class="invis">
+
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="images/calendario_decoas.jpeg" alt="Calendario DECOAS" class="img-fluid">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sidebar">
+                            <div class="widget">
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="images/logo_decoas.jpeg" alt="DECOAS" class="img-fluid" style="max-width: 200px; margin: 0 auto;">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end widget -->
+
+                            <div class="widget">
+                                <h2 class="widget-title">Calendario 2026</h2>
+                                <div class="blog-meta">
+                                    <p>Calendario Anual de Actividades DECOAS con eventos mensuales de educación ambiental, gestión de riesgos y participación estudiantil.</p>
+                                    <small><a href="#calendario" title="">Ver todas las actividades</a></small>
+                                </div>
+                            </div><!-- end widget -->
+
+                            <div class="widget">
+                                <h2 class="widget-title">Meses</h2>
+                                <div class="blog-list-widget">
+                                    <div class="list-group">
+                                        <a href="#febrero" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">🌱 Febrero</h5>
+                                                <small>Respira Limpio</small>
+                                            </div>
+                                        </a>
+                                        <a href="#marzo" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">💧 Marzo</h5>
+                                                <small>Día del Agua</small>
+                                            </div>
+                                        </a>
+                                        <a href="#abril" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">🌍 Abril</h5>
+                                                <small>Ecoacción Departamental</small>
+                                            </div>
+                                        </a>
+                                        <a href="#mayo" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">🚑 Mayo</h5>
+                                                <small>Preparados para Actuar</small>
+                                            </div>
+                                        </a>
+                                        <a href="#junio" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">📖 Junio</h5>
+                                                <small>Ecoacción Digital</small>
+                                            </div>
+                                        </a>
+                                        <a href="#julio" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">♻️ Julio</h5>
+                                                <small>Feria de Reciclaje</small>
+                                            </div>
+                                        </a>
+                                        <a href="#agosto" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">❤️ Agosto</h5>
+                                                <small>Cuidándome Mejor</small>
+                                            </div>
+                                        </a>
+                                        <a href="#septiembre" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">📸 Septiembre</h5>
+                                                <small>Galería Digital</small>
+                                            </div>
+                                        </a>
+                                        <a href="#octubre" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 last-item justify-content-between">
+                                                <h5 class="mb-1">🌿 Octubre</h5>
+                                                <small>Raíces Verdes</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- end blog-list -->
+                            </div><!-- end widget -->
+
+                            <div class="widget">
+                                <h2 class="widget-title">Beneficios Clave</h2>
+                                <div class="blog-list-widget">
+                                    <div class="list-group">
+                                        <a href="index.html#beneficios" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">🎓 Formación ambiental</h5>
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <a href="index.html#beneficios" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 justify-content-between">
+                                                <h5 class="mb-1">🌍 Conciencia ecológica</h5>
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <a href="index.html#beneficios" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="w-100 last-item justify-content-between">
+                                                <h5 class="mb-1">🤝 Participación comunitaria</h5>
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- end blog-list -->
+                            </div><!-- end widget -->
+
+                            <div class="widget">
+                                <h2 class="widget-title">Síguenos</h2>
+                                <div class="row text-center">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button facebook-button">
+                                            <i class="fa fa-facebook"></i>
+                                            <p>DECOAS</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button twitter-button">
+                                            <i class="fa fa-twitter"></i>
+                                            <p>@DECOAS</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button google-button">
+                                            <i class="fa fa-instagram"></i>
+                                            <p>DECOAS</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <a href="#" class="social-button youtube-button">
+                                            <i class="fa fa-youtube"></i>
+                                            <p>DECOAS</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- end widget -->
+
+                            <div class="widget">
+                                <div class="banner-spot clearfix">
+                                    <div class="banner-img">
+                                        <img src="images/calendario_decoas.jpeg" alt="Calendario DECOAS" class="img-fluid">
+                                    </div><!-- end banner-img -->
+                                </div><!-- end banner -->
+                            </div><!-- end widget -->
+                        </div><!-- end sidebar -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="widget">
+                            <div class="footer-text text-center">
+                                <a href="index.html"><img src="images/logo_decoas.jpeg" alt="DECOAS Santa Bárbara" class="img-fluid" style="max-height: 80px; border-radius: 8px;"></a>
+                                <p><strong>DECOAS Santa Bárbara</strong><br>
+                                Departamento de Educación, Comunicación Ambiental y Salud<br>
+                                "Formando ciudadanos comprometidos con el ambiente, la escuela y la comunidad."</p>
+                                <div class="social">
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="YouTube"><i class="fa fa-youtube"></i></a>
+                                </div>
+                            </div><!-- end footer-text -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <br>
+                        <div class="copyright">&copy; 2025 DECOAS Santa Bárbara. Unidad de Tecnología Informática &mdash; DDE Santa Bárbara.</div>
+                    </div>
+                </div>
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <div class="dmtop">Scroll to Top</div>
+        
+    </div><!-- end wrapper -->
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
